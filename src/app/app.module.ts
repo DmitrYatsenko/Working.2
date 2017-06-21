@@ -4,17 +4,20 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { FilmCardComponent } from './film-card/film-card.component';
-import { FilmCardService } from './film-card/film-card.service';
+import { FilmService } from './film-card/film-card.service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from "@angular/router";
+import { FilmListComponent } from './film-list/film-list.component';
 import { routes } from "./app.routes";
+
 @NgModule({
   declarations: [
       AppComponent,
       FilmCardComponent,
-      DashboardComponent
+      DashboardComponent,
+      FilmListComponent
   ],
   imports: [
       BrowserModule,
@@ -24,7 +27,7 @@ import { routes } from "./app.routes";
       BrowserAnimationsModule,
       RouterModule.forRoot(routes)
   ],
-  providers: [FilmCardService],
+  providers: [FilmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

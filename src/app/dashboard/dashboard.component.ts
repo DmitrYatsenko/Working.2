@@ -8,10 +8,12 @@
 })
 
 export class DashboardComponent {
+    title: string = 'Каталог фильмов JSExpert';
 
     links = [
-        { path: '/home', icon: 'home', label: 'Главная' },
-        { path: '/list', icon: 'list', label: 'Ссылки' },
-        { path: '/statistics', icon: 'settings', label: 'Статистика' }
+        { path: '/dashboard', icon: 'home', label: 'Главная' },
+        { path: '/filmList', icon: 'event_name', label: 'Все фильмы' },
+        { path: '/profile', icon: 'settings', label: 'Профиль' }
     ];
+   
 }
